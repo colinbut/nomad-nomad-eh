@@ -73,7 +73,7 @@ nomad alloc logs 178c6cdd redis
 nomad job plan example.nomad
 ```
 
-##Stopping a Job
+## Stopping a Job
 
 ```bash
 nomad job stop example
