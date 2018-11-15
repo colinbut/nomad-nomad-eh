@@ -1,6 +1,16 @@
 # Nomad Nomad
 
-## Basic Stuff
+* [Basic Stuff](#basic-stuff)
+* [Start Agent](#start-agent)
+* [Cluster Info](#cluster-info)
+* [Stop Agent](#stop-agent)
+* [Running a Job](#running-a-job)
+* [Modifying a Job](#modifying-a-job)
+* [Stopping a Job](#stopping-a-job)
+* [Clustering](#clustering)
+* [UI](#ui)
+
+## <a name="basic-stuff"></a>Basic Stuff
 
 Checking the version of Nomad. One of first things commonly done when starting up a new tool.
 
@@ -14,7 +24,7 @@ Checking the Nomad agent information.
 nomad agent-info
 ```
 
-## Start Agent
+## <a name="start-agent"></a>Start Agent
 
 ... starting the agent in "dev" mode
 
@@ -22,7 +32,7 @@ nomad agent-info
 sudo nomad agent -dev
 ```
 
-## Cluster Info
+## <a name="cluster-info"></a>Cluster Info
 
 ```bash
 nomad node status
@@ -32,12 +42,12 @@ nomad node status
 nomad server members -detailed
 ```
 
-## Stop Agent
+## <a name="stop-agent"></a>Stop Agent
 
 Just do a `Ctrl - C`
 
 
-## Running a Job
+## <a name="running-a-job"></a>Running a Job
 
 __Initiate a job__
 ```bash
@@ -67,19 +77,19 @@ nomad alloc status 178c6cdd
 nomad alloc logs 178c6cdd redis
 ```
 
-## Modifying a Job
+## <a name="modifying-a-job"></a>Modifying a Job
 
 ```bash
 nomad job plan example.nomad
 ```
 
-## Stopping a Job
+## <a name="stopping-a-job"></a>Stopping a Job
 
 ```bash
 nomad job stop example
 ```
 
-## Clustering
+## <a name="clustering"></a>Clustering
 
 In a nutshell:
 1) servers manage state and make scheduling decisions
@@ -96,7 +106,7 @@ nomad agent -config client1.hcl
 nomad agent -config client2.hcl
 ```
 
-## UI
+## <a name="ui"></a>UI
 
 Nomad comes with a User Interface web portal allowing you to do all the same stuff the CLI does.
 
